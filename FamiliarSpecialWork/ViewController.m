@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
+#import "DBAdapter.h"
 @interface ViewController ()
 
 @end
@@ -22,10 +23,14 @@
 @synthesize mButtonEmoticonBookmark;
 @synthesize mButtonEmoticonCollection;
 @synthesize mArrayButton;
-             
+@synthesize mDBAdater;             
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //디비 있으면, 디비 데이터 있으면, 그걸로 초기화     
+    mDBAdater = [AppDelegate sharedDBAdapter];
+    
 	[self.view setBackgroundColor:[UIColor yellowColor]]; //다른 object들이 보이도록 임시로 view를 노란색으로.
     
     mTextFieldMain = [[UITextField alloc]initWithFrame:CGRectMake(10, 50, 300, 31)];
@@ -51,16 +56,23 @@
     [self.view addSubview:mButtonEmoticonMine];
     [self.view addSubview:mButtonEmoticonBookmark];
     
+    NSMutableArray* _array = [mDBAdater SelectToConsonant];//DB에서 자음들을 가져온다.
+    
     mArrayButton = [NSMutableArray array];
     NSInteger _cnt = 14;
     CGFloat _width = 60;
     int _num = 0;
+    CGFloat _x = 0, _y=0;
+    NSString* _str = [[NSString alloc]init];
+
     for( NSInteger i=0; i<_cnt; i++ )
     {
-        CGFloat _x = 20 + (i/5)*10; //2번 째 줄은 x좌표가 10만큼 더, 3번 째 줄은 20만큼 더.
-        CGFloat _y = 155 + (i/5)*55;
+        _x = 20 + (i/5)*10; //2번 째 줄은 x좌표가 10만큼 더, 3번 째 줄은 20만큼 더.
+        _y = 155 + (i/5)*55;
 
-        [mArrayButton addObject: [self CreateButton:@"" type:UIButtonTypeRoundedRect 
+        if( nil != _array ) //자음이 있을 때 _str네 넣는다.
+//            _str = [_array objectAtIndex:i];
+        [mArrayButton addObject: [self CreateButton:_str type:UIButtonTypeRoundedRect 
                                                frame:CGRectMake(_x + _width*_num, _y, 40, 40) target:self action:nil img:@""]];
         _num++;
         if( 0 == (_num%5) )

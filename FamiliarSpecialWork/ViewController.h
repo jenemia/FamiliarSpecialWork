@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class DBAdapter;
+
 @interface ViewController : UIViewController
+
 
 @property (strong, nonatomic) UITextField* mTextFieldMain;
 
@@ -21,6 +24,8 @@
 
 //특수문자가 있는 View로 넘어가는 Button을 넣기 위한 Array
 @property (strong, nonatomic) NSMutableArray* mArrayButton;
+//DB 연결 객체
+@property (strong, nonatomic) DBAdapter* mDBAdater;
 
 //Button을 생성하는 Method.
 -(UIButton*)CreateButton:(NSString *)title type:(UIButtonType)type 

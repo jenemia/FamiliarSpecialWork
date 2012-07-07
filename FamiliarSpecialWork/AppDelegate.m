@@ -7,13 +7,15 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import "DBAdapter.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+
+static DBAdapter* g_DBAdapter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -23,6 +25,15 @@
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
++(DBAdapter*)sharedDBAdapter
+{
+    if( g_DBAdapter == nil )
+    {
+        g_DBAdapter = [[DBAdapter alloc]init];
+    }
+    return g_DBAdapter;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
