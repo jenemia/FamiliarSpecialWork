@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "DBAdapter.h"
+#import "SpecialWordViewController.h"
 @interface ViewController ()
 
 @end
@@ -23,13 +24,16 @@
 @synthesize mButtonEmoticonBookmark;
 @synthesize mButtonEmoticonCollection;
 @synthesize mArrayButton;
-@synthesize mDBAdater;             
+@synthesize mDBAdater;
+@synthesize mSpecialWord;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     //디비 있으면, 디비 데이터 있으면, 그걸로 초기화     
     mDBAdater = [AppDelegate sharedDBAdapter];
+    mSpecialWord = [AppDelegate shareSpeciaWord];
     
 	[self.view setBackgroundColor:[UIColor yellowColor]]; //다른 object들이 보이도록 임시로 view를 노란색으로.
     
@@ -71,9 +75,9 @@
         _y = 155 + (i/5)*55;
 
         if( nil != _array ) //자음이 있을 때 _str네 넣는다.
-//            _str = [_array objectAtIndex:i];
+            _str = [_array objectAtIndex:i];
         [mArrayButton addObject: [self CreateButton:_str type:UIButtonTypeRoundedRect 
-                                               frame:CGRectMake(_x + _width*_num, _y, 40, 40) target:self action:nil img:@""]];
+                                frame:CGRectMake(_x + _width*_num, _y, 40, 40) target:self action:@selector(ButtonClick:) img:@""]];
         _num++;
         if( 0 == (_num%5) )
             _num = 0;
@@ -122,4 +126,16 @@
     return button;
 }
 
+-(void)ButtonClick:(id)sender
+{
+    NSString* _con = [[NSString alloc]initWithFormat:((UIButton*)sender).titleLabel.text];
+    [SpecialWordViewController SetCon:_con];
+    [self presentModalViewController:mSpecialWord animated:YES];
+}
+
+#pragma mark TextField Delegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    return NO;
+}
 @end

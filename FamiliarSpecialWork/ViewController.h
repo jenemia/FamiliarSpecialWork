@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class DBAdapter;
+@class SpecialWordViewController;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 
 @property (strong, nonatomic) UITextField* mTextFieldMain;
@@ -26,6 +27,8 @@
 @property (strong, nonatomic) NSMutableArray* mArrayButton;
 //DB 연결 객체
 @property (strong, nonatomic) DBAdapter* mDBAdater;
+//특수문자 연결 ViewController 객체
+@property (strong, nonatomic) SpecialWordViewController* mSpecialWord;
 
 //Button을 생성하는 Method.
 -(UIButton*)CreateButton:(NSString *)title type:(UIButtonType)type 

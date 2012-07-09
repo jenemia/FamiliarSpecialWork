@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DBAdapter.h"
+#import "SpecialWordViewController.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,7 @@
 @synthesize viewController = _viewController;
 
 static DBAdapter* g_DBAdapter;
+static SpecialWordViewController* g_SpecialWord;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -34,6 +36,15 @@ static DBAdapter* g_DBAdapter;
         g_DBAdapter = [[DBAdapter alloc]init];
     }
     return g_DBAdapter;
+}
+
++(SpecialWordViewController*)shareSpeciaWord
+{
+    if( g_SpecialWord == nil )
+    {
+        g_SpecialWord = [[SpecialWordViewController alloc]init];        
+    }
+    return g_SpecialWord;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

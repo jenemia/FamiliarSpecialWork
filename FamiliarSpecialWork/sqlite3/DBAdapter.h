@@ -17,5 +17,6 @@
 -(id)init;
 -(void)initDB;
 -(NSMutableArray*)SelectToConsonant;
+-(NSMutableArray*)SelectToSpecialWord:(NSString*)con;
 
 @end

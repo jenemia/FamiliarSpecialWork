@@ -38,6 +38,22 @@
     if( [mFileManage fileExistsAtPath:mFilePath] )
     {
         NSLog(@"%@파일 존재",@"FamiliarSpecialWord.sqlite");
+        
+        // DB 특수문자 넣기
+//         
+//        NSString* word = [[NSString alloc]initWithFormat:@"%@", @"　	！	＇	，	．	／	：	；	？	＾	＿	｀	｜	￣	、	。	·	‥	…	¨	〃		―	∥	＼	∼	´	～	ˇ	˘	˝	˚	˙	¸	˛	¡	¿	ː			"	];
+//        NSString* con = [[NSString alloc]initWithFormat:@"%@", @"ㄱ"];
+//        
+//        NSArray* sepa = [word componentsSeparatedByString:@"	"];
+//        
+//        for( NSString* _temp in sepa )
+//        {
+//            if( ![_temp isEqualToString:@"	"] )
+//            {
+//                [self InsertToDB:con word:_temp];
+//            }   
+//        }
+              
         return;   
     }
     NSLog(@"%@ success", @"FamiliarSpecialWord.sqlite");
@@ -87,4 +103,64 @@
     return _result;
 }
 
+-(NSMutableArray*)SelectToSpecialWord:(NSString*)con
+{
+    sqlite3* _database;
+    if( sqlite3_open( [mFilePath UTF8String], &_database) != SQLITE_OK )
+    {
+        //database open 못 했을 때
+        sqlite3_close(_database);
+        NSLog(@"Sqlite database error");
+        return nil;
+    }
+    NSLog(@"Sqlite database success");
+    
+    sqlite3_stmt* _statement;
+    NSString* sql = [[NSString alloc]initWithFormat:
+                   @"select word from (select * from SpecialWord where con = '%@')", con];
+    const char* _sql = [sql UTF8String];
+    NSMutableArray* _result = [[NSMutableArray alloc]init];
+    
+    if( sqlite3_prepare_v2(_database, _sql, -1, &_statement, NULL) == SQLITE_OK )
+    {
+        while( sqlite3_step(_statement) == SQLITE_ROW )
+        {
+            [_result addObject:[NSString stringWithUTF8String:(char*)sqlite3_column_text(_statement, 0)]];
+        }
+    }
+    else {
+        return nil;
+    }
+    sqlite3_finalize(_statement);    
+    sqlite3_close(_database);
+    
+    return _result;
+}
+
+-(void)InsertToDB:(NSString*)con word:(NSString*)word
+{
+    sqlite3* _database;
+    if( sqlite3_open( [mFilePath UTF8String], &_database) != SQLITE_OK )
+    {
+        //database open 못 했을 때
+        sqlite3_close(_database);
+        NSLog(@"Sqlite database error");
+        return;
+    }
+    NSLog(@"Sqlite database success");
+    
+    sqlite3_stmt* _statement;
+    NSString* sql = [[NSString alloc]initWithFormat:@"INSERT INTO SpecialWord (con, word) VALUES ("];
+    sql = [sql stringByAppendingFormat:@"'%@', ",con];
+    sql = [sql stringByAppendingFormat:@"'%@' );", word];
+    const char* _sql = [sql UTF8String];
+    
+    if( sqlite3_prepare_v2(_database, _sql, -1, &_statement, NULL) == SQLITE_OK )
+    {
+        if( sqlite3_step(_statement) != SQLITE_DONE )
+            NSLog(@"Step error");
+    }
+    sqlite3_finalize(_statement);    
+    sqlite3_close(_database);
+}
 @end

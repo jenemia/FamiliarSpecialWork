@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F388190115A82600001B4FA6 /* SpecialWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F388190015A82600001B4FA6 /* SpecialWordViewController.m */; };
 		F3AAEAE615A3FE2300B5A7E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */; };
 		F3AAEAE815A3FE2300B5A7E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */; };
 		F3AAEAEA15A3FE2300B5A7E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE915A3FE2300B5A7E0 /* CoreGraphics.framework */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		F38818F915A8189E001B4FA6 /* FamiliarSpecialWord.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FamiliarSpecialWord.sqlite; path = FamiliarSpecialWork/sqlite3/FamiliarSpecialWord.sqlite; sourceTree = "<group>"; };
+		F38818FF15A82600001B4FA6 /* SpecialWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialWordViewController.h; path = FamiliarSpecialWork/SpecialWord/SpecialWordViewController.h; sourceTree = "<group>"; };
+		F388190015A82600001B4FA6 /* SpecialWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialWordViewController.m; path = FamiliarSpecialWork/SpecialWord/SpecialWordViewController.m; sourceTree = "<group>"; };
 		F3AAEAE115A3FE2300B5A7E0 /* FamiliarSpecialWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamiliarSpecialWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,9 +55,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F38818FE15A825BD001B4FA6 /* SpecialWord */ = {
+			isa = PBXGroup;
+			children = (
+				F38818FF15A82600001B4FA6 /* SpecialWordViewController.h */,
+				F388190015A82600001B4FA6 /* SpecialWordViewController.m */,
+			);
+			name = SpecialWord;
+			sourceTree = "<group>";
+		};
 		F3AAEAD615A3FE2300B5A7E0 = {
 			isa = PBXGroup;
 			children = (
+				F38818FE15A825BD001B4FA6 /* SpecialWord */,
 				F3AAEB4415A423D700B5A7E0 /* sqlite3 */,
 				F3AAEAEB15A3FE2300B5A7E0 /* FamiliarSpecialWork */,
 				F3AAEAE415A3FE2300B5A7E0 /* Frameworks */,
@@ -180,6 +193,7 @@
 				F3AAEAF615A3FE2300B5A7E0 /* AppDelegate.m in Sources */,
 				F3AAEAF915A3FE2300B5A7E0 /* ViewController.m in Sources */,
 				F3AAEB4715A4240500B5A7E0 /* DBAdapter.m in Sources */,
+				F388190115A82600001B4FA6 /* SpecialWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

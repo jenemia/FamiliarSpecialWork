@@ -10,6 +10,7 @@
 
 @class ViewController;
 @class DBAdapter;
+@class SpecialWordViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -17,5 +18,6 @@
 @property (strong, nonatomic) ViewController *viewController;
 
 +(DBAdapter*)sharedDBAdapter;
++(SpecialWordViewController*)shareSpeciaWord;
 
 @end
