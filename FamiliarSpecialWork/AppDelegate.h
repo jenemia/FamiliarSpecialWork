@@ -19,5 +19,6 @@
 
 +(DBAdapter*)sharedDBAdapter;
 +(SpecialWordViewController*)shareSpeciaWord;
++(NSMutableArray*)shareWordArray;
 
 @end

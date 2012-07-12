@@ -41,8 +41,8 @@
         
         // DB 특수문자 넣기
 //         
-//        NSString* word = [[NSString alloc]initWithFormat:@"%@", @"　	！	＇	，	．	／	：	；	？	＾	＿	｀	｜	￣	、	。	·	‥	…	¨	〃		―	∥	＼	∼	´	～	ˇ	˘	˝	˚	˙	¸	˛	¡	¿	ː			"	];
-//        NSString* con = [[NSString alloc]initWithFormat:@"%@", @"ㄱ"];
+//        NSString* word = [[NSString alloc]initWithFormat:@"%@", @"А	Б	В	Г	Д	Е	Ё	Ж	З	И	Й	К	Л	М	Н	О	П	Р	С	Т	У	Ф	Х	Ц	Ч	Ш	Щ	Ъ	Ы	Ь	Э	Ю	Я	а	б	в	г	д"];
+//        NSString* con = [[NSString alloc]initWithFormat:@"%@", @"ㅆ"];
 //        
 //        NSArray* sepa = [word componentsSeparatedByString:@"	"];
 //        

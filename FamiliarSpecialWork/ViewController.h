@@ -14,7 +14,7 @@
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
 
-@property (strong, nonatomic) UITextField* mTextFieldMain;
+@property (strong, nonatomic) UITextField* mTextField;
 
 //다른 View로 넘어가는 Button
 @property (strong, nonatomic) UIButton* mButtonKatok;

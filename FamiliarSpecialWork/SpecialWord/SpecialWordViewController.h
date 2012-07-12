@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 @class DBAdapter;
-@interface SpecialWordViewController : UIViewController
+@interface SpecialWordViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) UIScrollView* mScrollView;
 @property (nonatomic) NSInteger mCountView;
+@property (strong, nonatomic) UITextField* mTextField;
+@property (strong, nonatomic) UILabel* mLabel;
+@property (strong, nonatomic) UIButton* mButtonBack;
+@property (strong, nonatomic) UIButton* mButtonCopy;
+@property (strong, nonatomic) UIButton* mButtonClear;
+@property (strong, nonatomic) UIButton* mButtonDel;
 
 - (id)init;
 @property (strong, nonatomic) DBAdapter* mDBAdater;

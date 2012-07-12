@@ -18,6 +18,7 @@
 
 static DBAdapter* g_DBAdapter;
 static SpecialWordViewController* g_SpecialWord;
+static NSMutableArray* g_WordArray;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -45,6 +46,15 @@ static SpecialWordViewController* g_SpecialWord;
         g_SpecialWord = [[SpecialWordViewController alloc]init];        
     }
     return g_SpecialWord;
+}
+
++(NSMutableArray*)shareWordArray
+{
+    if( g_WordArray == nil )
+    {
+        g_WordArray = [[NSMutableArray alloc]init];
+    }
+    return g_WordArray;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

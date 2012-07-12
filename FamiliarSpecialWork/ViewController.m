@@ -16,7 +16,7 @@
 
 @implementation ViewController
 
-@synthesize mTextFieldMain;
+@synthesize mTextField;
 
 @synthesize mButtonKatok;
 @synthesize mButtonEmoticonAdd;
@@ -37,11 +37,12 @@
     
 	[self.view setBackgroundColor:[UIColor yellowColor]]; //다른 object들이 보이도록 임시로 view를 노란색으로.
     
-    mTextFieldMain = [[UITextField alloc]initWithFrame:CGRectMake(10, 50, 300, 31)];
-    mTextFieldMain.borderStyle = UITextBorderStyleRoundedRect; //모서리 부분을 둥글게
-    [mTextFieldMain setBackgroundColor:[UIColor whiteColor]]; 
+    mTextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 50, 300, 31)];
+    mTextField.borderStyle = UITextBorderStyleRoundedRect; //모서리 부분을 둥글게
+    [mTextField setBackgroundColor:[UIColor whiteColor]];
+    mTextField.delegate = self;
     
-    [self.view addSubview:mTextFieldMain];
+    [self.view addSubview:mTextField];
     
     mButtonKatok = [self CreateButton:@"카톡 보내기" type:UIButtonTypeRoundedRect 
                                 frame:CGRectMake(10, 95, 85, 37) target:self action:nil img:@""];
@@ -98,6 +99,18 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{   
+    //싱글톤 객체 배열에 있는 문자열로 초기화. 혹여 문자가 안맞을 수 도 있으니.
+    mTextField.text = @"";
+    for( NSString* tmp in [AppDelegate shareWordArray] )
+    {
+        mTextField.text = [mTextField.text stringByAppendingFormat:tmp];
+    }
+    
+    [super viewWillAppear:YES];
 }
 
 
