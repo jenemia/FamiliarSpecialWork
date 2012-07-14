@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F381B3FF15AF130300931ED0 /* KakaoLinkCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F381B3FE15AF130300931ED0 /* KakaoLinkCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F381B40215AF13AF00931ED0 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F381B40115AF13AF00931ED0 /* YAJLiOS.framework */; };
 		F388190115A82600001B4FA6 /* SpecialWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F388190015A82600001B4FA6 /* SpecialWordViewController.m */; };
+		F388242215B11678003CCEAD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F388241C15B11678003CCEAD /* background.png */; };
+		F388242315B11678003CCEAD /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = F388241D15B11678003CCEAD /* default.png */; };
+		F388242415B11678003CCEAD /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F388241E15B11678003CCEAD /* default@2x.png */; };
+		F388242615B11678003CCEAD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F388242015B11678003CCEAD /* Icon@2x.png */; };
+		F388242715B11678003CCEAD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F388242115B11678003CCEAD /* iTunesArtwork.png */; };
+		F388243015B1247F003CCEAD /* FamiliarSpecialWord.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F388242F15B1247F003CCEAD /* FamiliarSpecialWord.sqlite */; };
 		F3AAEAE615A3FE2300B5A7E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */; };
 		F3AAEAE815A3FE2300B5A7E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */; };
 		F3AAEAEA15A3FE2300B5A7E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE915A3FE2300B5A7E0 /* CoreGraphics.framework */; };
@@ -20,9 +28,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F38818F915A8189E001B4FA6 /* FamiliarSpecialWord.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FamiliarSpecialWord.sqlite; path = FamiliarSpecialWork/sqlite3/FamiliarSpecialWord.sqlite; sourceTree = "<group>"; };
+		F381B3FD15AF130300931ED0 /* KakaoLinkCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KakaoLinkCenter.h; sourceTree = "<group>"; };
+		F381B3FE15AF130300931ED0 /* KakaoLinkCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KakaoLinkCenter.m; sourceTree = "<group>"; };
+		F381B40115AF13AF00931ED0 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YAJLiOS.framework; path = FamiliarSpecialWork/YAJLiOS.framework; sourceTree = "<group>"; };
 		F38818FF15A82600001B4FA6 /* SpecialWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpecialWordViewController.h; path = FamiliarSpecialWork/SpecialWord/SpecialWordViewController.h; sourceTree = "<group>"; };
 		F388190015A82600001B4FA6 /* SpecialWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpecialWordViewController.m; path = FamiliarSpecialWork/SpecialWord/SpecialWordViewController.m; sourceTree = "<group>"; };
+		F388241C15B11678003CCEAD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F388241D15B11678003CCEAD /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		F388241E15B11678003CCEAD /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		F388241F15B11678003CCEAD /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F388242015B11678003CCEAD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F388242115B11678003CCEAD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		F388242F15B1247F003CCEAD /* FamiliarSpecialWord.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FamiliarSpecialWord.sqlite; path = FamiliarSpecialWork/sqlite3/FamiliarSpecialWord.sqlite; sourceTree = "<group>"; };
 		F3AAEAE115A3FE2300B5A7E0 /* FamiliarSpecialWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamiliarSpecialWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,12 +66,23 @@
 				F3AAEAE615A3FE2300B5A7E0 /* UIKit.framework in Frameworks */,
 				F3AAEAE815A3FE2300B5A7E0 /* Foundation.framework in Frameworks */,
 				F3AAEAEA15A3FE2300B5A7E0 /* CoreGraphics.framework in Frameworks */,
+				F381B40215AF13AF00931ED0 /* YAJLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F381B3FC15AF130300931ED0 /* kakaotalk */ = {
+			isa = PBXGroup;
+			children = (
+				F381B3FD15AF130300931ED0 /* KakaoLinkCenter.h */,
+				F381B3FE15AF130300931ED0 /* KakaoLinkCenter.m */,
+			);
+			name = kakaotalk;
+			path = FamiliarSpecialWork/kakaotalk;
+			sourceTree = "<group>";
+		};
 		F38818FE15A825BD001B4FA6 /* SpecialWord */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +92,25 @@
 			name = SpecialWord;
 			sourceTree = "<group>";
 		};
+		F388241B15B11678003CCEAD /* image */ = {
+			isa = PBXGroup;
+			children = (
+				F388241C15B11678003CCEAD /* background.png */,
+				F388241D15B11678003CCEAD /* default.png */,
+				F388241E15B11678003CCEAD /* default@2x.png */,
+				F388241F15B11678003CCEAD /* icon.png */,
+				F388242015B11678003CCEAD /* Icon@2x.png */,
+				F388242115B11678003CCEAD /* iTunesArtwork.png */,
+			);
+			name = image;
+			path = FamiliarSpecialWork/image;
+			sourceTree = "<group>";
+		};
 		F3AAEAD615A3FE2300B5A7E0 = {
 			isa = PBXGroup;
 			children = (
+				F388241B15B11678003CCEAD /* image */,
+				F381B3FC15AF130300931ED0 /* kakaotalk */,
 				F38818FE15A825BD001B4FA6 /* SpecialWord */,
 				F3AAEB4415A423D700B5A7E0 /* sqlite3 */,
 				F3AAEAEB15A3FE2300B5A7E0 /* FamiliarSpecialWork */,
@@ -86,6 +130,7 @@
 		F3AAEAE415A3FE2300B5A7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F381B40115AF13AF00931ED0 /* YAJLiOS.framework */,
 				F3AAEB4115A4233E00B5A7E0 /* libsqlite3.0.dylib */,
 				F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */,
 				F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */,
@@ -120,7 +165,7 @@
 		F3AAEB4415A423D700B5A7E0 /* sqlite3 */ = {
 			isa = PBXGroup;
 			children = (
-				F38818F915A8189E001B4FA6 /* FamiliarSpecialWord.sqlite */,
+				F388242F15B1247F003CCEAD /* FamiliarSpecialWord.sqlite */,
 				F3AAEB4515A4240500B5A7E0 /* DBAdapter.h */,
 				F3AAEB4615A4240500B5A7E0 /* DBAdapter.m */,
 			);
@@ -179,6 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AAEAF015A3FE2300B5A7E0 /* InfoPlist.strings in Resources */,
+				F388242215B11678003CCEAD /* background.png in Resources */,
+				F388242315B11678003CCEAD /* default.png in Resources */,
+				F388242415B11678003CCEAD /* default@2x.png in Resources */,
+				F388242615B11678003CCEAD /* Icon@2x.png in Resources */,
+				F388243015B1247F003CCEAD /* FamiliarSpecialWord.sqlite in Resources */,
+				F388242715B11678003CCEAD /* iTunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +245,7 @@
 				F3AAEAF915A3FE2300B5A7E0 /* ViewController.m in Sources */,
 				F3AAEB4715A4240500B5A7E0 /* DBAdapter.m in Sources */,
 				F388190115A82600001B4FA6 /* SpecialWordViewController.m in Sources */,
+				F381B3FF15AF130300931ED0 /* KakaoLinkCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +312,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: SOOHYUN Kim";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FamiliarSpecialWork/FamiliarSpecialWord-Prefix.pch";
 				INFOPLIST_FILE = "FamiliarSpecialWork/FamiliarSpecialWord-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = FamiliarSpecialWord;
 				PROVISIONING_PROFILE = "DF06C564-C88A-4D4F-873A-7C45956C8E40";
 				WRAPPER_EXTENSION = app;
@@ -273,6 +330,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: SOOHYUN Kim";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FamiliarSpecialWork/FamiliarSpecialWord-Prefix.pch";
 				INFOPLIST_FILE = "FamiliarSpecialWork/FamiliarSpecialWord-Info.plist";

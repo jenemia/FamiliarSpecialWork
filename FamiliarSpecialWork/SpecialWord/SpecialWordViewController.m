@@ -37,7 +37,8 @@ static NSString* g_Con;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor yellowColor]];   
+//    [self.view setBackgroundColor:[UIColor yellowColor]];   
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
 
     mDBAdater = [AppDelegate sharedDBAdapter];
     
@@ -49,7 +50,7 @@ static NSString* g_Con;
     
     mTextField = [[UITextField alloc]initWithFrame:CGRectMake(0, 50, 320, 31)];
     mTextField.borderStyle = UITextBorderStyleRoundedRect; //모서리 부분을 둥글게
-    mTextField.backgroundColor = [UIColor whiteColor];
+    //mTextField.backgroundColor = [UIColor whiteColor];
     mTextField.text = @"";
     mTextField.delegate = self;
     [self.view addSubview:mTextField];
@@ -57,6 +58,7 @@ static NSString* g_Con;
     mLabel = [[UILabel alloc]initWithFrame:CGRectMake(115, 70, 80, 80)];
     [self.view addSubview:mLabel];
     [mLabel setFont:[UIFont systemFontOfSize:90]];
+    mLabel.backgroundColor = [UIColor clearColor];
     
     mButtonBack = [self CreateButton:@"Back" type:UIButtonTypeRoundedRect 
                                frame:CGRectMake(20, 390, 50, 40) target:self action:@selector(BackButton) img:@""];

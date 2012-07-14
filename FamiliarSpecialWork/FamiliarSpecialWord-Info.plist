@@ -8,6 +8,14 @@
 	<string>익숙한 특수문자</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array/>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.jenemia.SpecialWord</string>
 	<key>CFBundleInfoDictionaryVersion</key>

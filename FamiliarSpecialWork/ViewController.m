@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "DBAdapter.h"
 #import "SpecialWordViewController.h"
+#import "KakaoLinkCenter.h"
 @interface ViewController ()
 
 @end
@@ -19,10 +20,6 @@
 @synthesize mTextField;
 
 @synthesize mButtonKatok;
-@synthesize mButtonEmoticonAdd;
-@synthesize mButtonEmoticonMine;
-@synthesize mButtonEmoticonBookmark;
-@synthesize mButtonEmoticonCollection;
 @synthesize mArrayButton;
 @synthesize mDBAdater;
 @synthesize mSpecialWord;
@@ -35,7 +32,8 @@
     mDBAdater = [AppDelegate sharedDBAdapter];
     mSpecialWord = [AppDelegate shareSpeciaWord];
     
-	[self.view setBackgroundColor:[UIColor yellowColor]]; //다른 object들이 보이도록 임시로 view를 노란색으로.
+//	[self.view setBackgroundColor:[UIColor yellowColor]]; //다른 object들이 보이도록 임시로 view를 노란색으로.
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     mTextField = [[UITextField alloc]initWithFrame:CGRectMake(10, 50, 300, 31)];
     mTextField.borderStyle = UITextBorderStyleRoundedRect; //모서리 부분을 둥글게
@@ -45,26 +43,15 @@
     [self.view addSubview:mTextField];
     
     mButtonKatok = [self CreateButton:@"카톡 보내기" type:UIButtonTypeRoundedRect 
-                                frame:CGRectMake(10, 95, 85, 37) target:self action:nil img:@""];
-    mButtonEmoticonAdd = [self CreateButton:@"이모티콘 추가" type:UIButtonTypeRoundedRect 
-                                      frame:CGRectMake(200, 95, 110, 37) target:self action:nil img:@""];
-    mButtonEmoticonCollection = [self CreateButton:@"이모티콘 모음" type:UIButtonTypeRoundedRect 
-                                             frame:CGRectMake(180, 335, 130, 37) target:self action:nil img:@""];
-    mButtonEmoticonMine = [self CreateButton:@"사용자 이모티콘" type:UIButtonTypeRoundedRect 
-                                       frame:CGRectMake(180, 380, 130, 37) target:self action:nil img:@""];
-    mButtonEmoticonBookmark = [self CreateButton:@"즐겨찾기" type:UIButtonTypeRoundedRect 
-                                           frame:CGRectMake(20, 380, 70, 37) target:self action:nil img:@""];
+                                frame:CGRectMake(10, 95, 85, 37) target:self 
+                               action:@selector(KakaotokButton) img:@""];
     
     [self.view addSubview:mButtonKatok];
-    [self.view addSubview:mButtonEmoticonAdd];
-    [self.view addSubview:mButtonEmoticonCollection];
-    [self.view addSubview:mButtonEmoticonMine];
-    [self.view addSubview:mButtonEmoticonBookmark];
     
     NSMutableArray* _array = [mDBAdater SelectToConsonant];//DB에서 자음들을 가져온다.
     
     mArrayButton = [NSMutableArray array];
-    NSInteger _cnt = 14;
+    NSInteger _cnt = 18;
     CGFloat _width = 60;
     int _num = 0;
     CGFloat _x = 0, _y=0;
@@ -74,14 +61,26 @@
     {
         _x = 20 + (i/5)*10; //2번 째 줄은 x좌표가 10만큼 더, 3번 째 줄은 20만큼 더.
         _y = 155 + (i/5)*55;
+        
+        if( 14 == i )
+            _num = 0;
+        
+        if( 14 <= i )
+        {
+            _x = 20;
+            _y = 155 + (16/5)*55;
+        }
 
         if( nil != _array ) //자음이 있을 때 _str네 넣는다.
             _str = [_array objectAtIndex:i];
-        [mArrayButton addObject: [self CreateButton:_str type:UIButtonTypeRoundedRect 
-                                frame:CGRectMake(_x + _width*_num, _y, 40, 40) target:self action:@selector(ButtonClick:) img:@""]];
+        UIButton* _btn = [self CreateButton:_str type:UIButtonTypeRoundedRect 
+                                      frame:CGRectMake(_x + _width*_num, _y, 40, 40) target:self action:@selector(ButtonClick:) img:@""];
+        _btn.titleLabel.font = [UIFont systemFontOfSize:30];
+        [mArrayButton addObject: _btn];
         _num++;
         if( 0 == (_num%5) )
             _num = 0;
+  
     }
     
     for( UIButton* _button in mArrayButton )
@@ -144,6 +143,25 @@
     NSString* _con = [[NSString alloc]initWithFormat:((UIButton*)sender).titleLabel.text];
     [SpecialWordViewController SetCon:_con];
     [self presentModalViewController:mSpecialWord animated:YES];
+}
+
+-(void)KakaotokButton
+{
+    NSString *message = mTextField.text;
+    NSString *referenceURLString = @"";
+    NSString *appBundleID = @"com.jenemia.SpecialWord";
+    NSString *appVersion = @"2.0";
+    NSString *appName = @"";
+    
+    if ([[KakaoLinkCenter defaultCenter] canOpenKakaoLink]) {
+        [[KakaoLinkCenter defaultCenter] openKakaoLinkWithURL:referenceURLString 
+                                                   appVersion:appVersion
+                                                  appBundleID:appBundleID
+                                                      appName:appName
+                                                      message:message];
+    } else {
+        NSLog(@"카톡이없네요");
+    }
 }
 
 #pragma mark TextField Delegate

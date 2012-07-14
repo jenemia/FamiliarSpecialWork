@@ -31,7 +31,8 @@
                                     (NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     //document path에 *.sqlite 파일 생성
-    mFilePath = [_documentDirectory stringByAppendingPathComponent:@"FamiliarSpecialWord.sqlite"];
+    NSString* _database = [[NSString alloc]initWithFormat:@"FamiliarSpecialWord.sqlite"];
+    mFilePath = [_documentDirectory stringByAppendingPathComponent:_database];
     
     //file존재 하면 return;
     mFileManage = [NSFileManager defaultManager];
@@ -56,19 +57,33 @@
               
         return;   
     }
-    NSLog(@"%@ success", @"FamiliarSpecialWord.sqlite");
-    
-    sqlite3* _database;
-    if( sqlite3_open( [mFilePath UTF8String], &_database) != SQLITE_OK )
+    else 
     {
-        //database open 못 했을 때
-        sqlite3_close(_database);
-        NSLog(@"Sqlite database error");
-        return;
+        NSError *error;
+        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath]stringByAppendingPathComponent:_database];
+//        NSLog(@"DBPath : %@", defaultDBPath);
+//        NSLog(@"filePath : %@", mFilePath);
+//        NSLog(@"bundle : %@", [[NSBundle mainBundle] pathForResource:@"FamiliarSpecialWord" ofType:@"sqlite"] );
+        if( ![mFileManage copyItemAtPath:defaultDBPath toPath:mFilePath error:&error] )
+        {
+            NSAssert1(0, @"Failed to create writable database file with message '%@'.", 
+                      [error localizedDescription]);
+        }
     }
-    NSLog(@"Sqlite database success");
-    
-    sqlite3_close(_database);
+//    
+//    NSLog(@"%@ success", @"FamiliarSpecialWord.sqlite");
+//    
+//    sqlite3* _database;
+//    if( sqlite3_open( [mFilePath UTF8String], &_database) != SQLITE_OK )
+//    {
+//        //database open 못 했을 때
+//        sqlite3_close(_database);
+//        NSLog(@"Sqlite database error");
+//        return;
+//    }
+//    NSLog(@"Sqlite database success");
+//    
+//    sqlite3_close(_database);
 }
 
 -(NSMutableArray*)SelectToConsonant
