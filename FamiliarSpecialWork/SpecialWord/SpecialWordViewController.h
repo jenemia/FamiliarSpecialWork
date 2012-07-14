@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdamAdView.h"
+
 @class DBAdapter;
-@interface SpecialWordViewController : UIViewController<UITextFieldDelegate>
+@interface SpecialWordViewController : UIViewController<UITextFieldDelegate,AdamAdViewDelegate>
 
 @property (strong, nonatomic) UIScrollView* mScrollView;
 @property (nonatomic) NSInteger mCountView;

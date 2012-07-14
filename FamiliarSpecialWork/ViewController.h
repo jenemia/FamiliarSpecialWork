@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdamAdView.h"
 
 @class DBAdapter;
 @class SpecialWordViewController;
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate, AdamAdViewDelegate>
 
 
 @property (strong, nonatomic) UITextField* mTextField;

@@ -53,6 +53,7 @@ static NSString* g_Con;
     //mTextField.backgroundColor = [UIColor whiteColor];
     mTextField.text = @"";
     mTextField.delegate = self;
+    mTextField.font = [UIFont fontWithName:@"Apple SD Gothic Neo" size:15];
     [self.view addSubview:mTextField];
     
     mLabel = [[UILabel alloc]initWithFrame:CGRectMake(115, 70, 80, 80)];
@@ -137,8 +138,35 @@ static NSString* g_Con;
     [mScrollView addSubview:view]; //마지막 View 생성
     mScrollView.contentSize = CGSizeMake(320*(_ViewCnt+1), 235);
     
+    
+    AdamAdView* _adView = [AdamAdView sharedAdView];
+    _adView.delegate = self;
+    
+    if( ![_adView.subviews isEqual:self.view] )
+    {
+        _adView.frame = CGRectMake(0, 0, 320, 48);
+        _adView.clientId = @"1ef1Z9eT1351519af70";
+        [self.view addSubview:_adView];
+        
+        if( !_adView.usingAutoRequest )
+        {
+            [_adView startAutoRequestAd:60.0];
+        }
+        
+    }
+    
     [super viewWillAppear:YES];
 }
+
+-(void)didReceiveAd:(AdamAdView *)adView
+{
+    NSLog(@"sucess");
+}
+
+-(void)didFailToReceiveAd:(AdamAdView *)adView error:(NSError *)error
+{
+}
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

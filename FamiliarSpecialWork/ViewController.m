@@ -11,6 +11,7 @@
 #import "DBAdapter.h"
 #import "SpecialWordViewController.h"
 #import "KakaoLinkCenter.h"
+
 @interface ViewController ()
 
 @end
@@ -39,6 +40,7 @@
     mTextField.borderStyle = UITextBorderStyleRoundedRect; //모서리 부분을 둥글게
     [mTextField setBackgroundColor:[UIColor whiteColor]];
     mTextField.delegate = self;
+    mTextField.font = [UIFont fontWithName:@"Apple SD Gothic Neo" size:15];
     
     [self.view addSubview:mTextField];
     
@@ -109,7 +111,31 @@
         mTextField.text = [mTextField.text stringByAppendingFormat:tmp];
     }
     
+    AdamAdView* _adView = [AdamAdView sharedAdView];
+    _adView.delegate = self;
+    
+    if( ![_adView.subviews isEqual:self.view] )
+    {
+        _adView.frame = CGRectMake(0, 0, 320, 48);
+        _adView.clientId = @"1ef1Z9eT1351519af70";
+        [self.view addSubview:_adView];
+        
+        if( !_adView.usingAutoRequest )
+        {
+            [_adView startAutoRequestAd:60.0];
+        }
+
+    }
     [super viewWillAppear:YES];
+}
+
+-(void)didReceiveAd:(AdamAdView *)adView
+{
+    NSLog(@"sucess");
+}
+
+-(void)didFailToReceiveAd:(AdamAdView *)adView error:(NSError *)error
+{
 }
 
 

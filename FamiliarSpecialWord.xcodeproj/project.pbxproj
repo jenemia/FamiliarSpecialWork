@@ -16,6 +16,15 @@
 		F388242615B11678003CCEAD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F388242015B11678003CCEAD /* Icon@2x.png */; };
 		F388242715B11678003CCEAD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F388242115B11678003CCEAD /* iTunesArtwork.png */; };
 		F388243015B1247F003CCEAD /* FamiliarSpecialWord.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F388242F15B1247F003CCEAD /* FamiliarSpecialWord.sqlite */; };
+		F388243615B12912003CCEAD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243515B12912003CCEAD /* MobileCoreServices.framework */; };
+		F388243815B12917003CCEAD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243715B12917003CCEAD /* CFNetwork.framework */; };
+		F388243A15B1291D003CCEAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243915B1291D003CCEAD /* SystemConfiguration.framework */; };
+		F388243C15B12923003CCEAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243B15B12923003CCEAD /* CoreLocation.framework */; };
+		F388243E15B1292A003CCEAD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243D15B12929003CCEAD /* CoreTelephony.framework */; };
+		F388244015B1292F003CCEAD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388243F15B1292F003CCEAD /* QuartzCore.framework */; };
+		F388244215B12934003CCEAD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F388244115B12934003CCEAD /* MediaPlayer.framework */; };
+		F388244415B12983003CCEAD /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F388244315B12983003CCEAD /* libz.1.2.5.dylib */; };
+		F388244C15B129F2003CCEAD /* libAdamPublisher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F388244A15B129F2003CCEAD /* libAdamPublisher.a */; };
 		F3AAEAE615A3FE2300B5A7E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */; };
 		F3AAEAE815A3FE2300B5A7E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */; };
 		F3AAEAEA15A3FE2300B5A7E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AAEAE915A3FE2300B5A7E0 /* CoreGraphics.framework */; };
@@ -40,6 +49,16 @@
 		F388242015B11678003CCEAD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		F388242115B11678003CCEAD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		F388242F15B1247F003CCEAD /* FamiliarSpecialWord.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = FamiliarSpecialWord.sqlite; path = FamiliarSpecialWork/sqlite3/FamiliarSpecialWord.sqlite; sourceTree = "<group>"; };
+		F388243515B12912003CCEAD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F388243715B12917003CCEAD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F388243915B1291D003CCEAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F388243B15B12923003CCEAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F388243D15B12929003CCEAD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F388243F15B1292F003CCEAD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F388244115B12934003CCEAD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F388244315B12983003CCEAD /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		F388244615B129F2003CCEAD /* AdamAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdamAdView.h; sourceTree = "<group>"; };
+		F388244A15B129F2003CCEAD /* libAdamPublisher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdamPublisher.a; sourceTree = "<group>"; };
 		F3AAEAE115A3FE2300B5A7E0 /* FamiliarSpecialWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamiliarSpecialWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F3AAEAE715A3FE2300B5A7E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,11 +81,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F388244415B12983003CCEAD /* libz.1.2.5.dylib in Frameworks */,
+				F388244215B12934003CCEAD /* MediaPlayer.framework in Frameworks */,
+				F388244015B1292F003CCEAD /* QuartzCore.framework in Frameworks */,
+				F388243E15B1292A003CCEAD /* CoreTelephony.framework in Frameworks */,
+				F388243C15B12923003CCEAD /* CoreLocation.framework in Frameworks */,
+				F388243A15B1291D003CCEAD /* SystemConfiguration.framework in Frameworks */,
+				F388243815B12917003CCEAD /* CFNetwork.framework in Frameworks */,
+				F388243615B12912003CCEAD /* MobileCoreServices.framework in Frameworks */,
 				F3AAEB4215A4233E00B5A7E0 /* libsqlite3.0.dylib in Frameworks */,
 				F3AAEAE615A3FE2300B5A7E0 /* UIKit.framework in Frameworks */,
 				F3AAEAE815A3FE2300B5A7E0 /* Foundation.framework in Frameworks */,
 				F3AAEAEA15A3FE2300B5A7E0 /* CoreGraphics.framework in Frameworks */,
 				F381B40215AF13AF00931ED0 /* YAJLiOS.framework in Frameworks */,
+				F388244C15B129F2003CCEAD /* libAdamPublisher.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +134,20 @@
 			path = FamiliarSpecialWork/image;
 			sourceTree = "<group>";
 		};
+		F388244515B129F2003CCEAD /* adam */ = {
+			isa = PBXGroup;
+			children = (
+				F388244615B129F2003CCEAD /* AdamAdView.h */,
+				F388244A15B129F2003CCEAD /* libAdamPublisher.a */,
+			);
+			name = adam;
+			path = FamiliarSpecialWork/adam;
+			sourceTree = "<group>";
+		};
 		F3AAEAD615A3FE2300B5A7E0 = {
 			isa = PBXGroup;
 			children = (
+				F388244515B129F2003CCEAD /* adam */,
 				F388241B15B11678003CCEAD /* image */,
 				F381B3FC15AF130300931ED0 /* kakaotalk */,
 				F38818FE15A825BD001B4FA6 /* SpecialWord */,
@@ -130,6 +169,14 @@
 		F3AAEAE415A3FE2300B5A7E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F388244315B12983003CCEAD /* libz.1.2.5.dylib */,
+				F388244115B12934003CCEAD /* MediaPlayer.framework */,
+				F388243F15B1292F003CCEAD /* QuartzCore.framework */,
+				F388243D15B12929003CCEAD /* CoreTelephony.framework */,
+				F388243B15B12923003CCEAD /* CoreLocation.framework */,
+				F388243915B1291D003CCEAD /* SystemConfiguration.framework */,
+				F388243715B12917003CCEAD /* CFNetwork.framework */,
+				F388243515B12912003CCEAD /* MobileCoreServices.framework */,
 				F381B40115AF13AF00931ED0 /* YAJLiOS.framework */,
 				F3AAEB4115A4233E00B5A7E0 /* libsqlite3.0.dylib */,
 				F3AAEAE515A3FE2300B5A7E0 /* UIKit.framework */,
@@ -263,6 +310,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F388245715B131F2003CCEAD /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SOOHYUN Kim";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DF06C564-C88A-4D4F-873A-7C45956C8E40";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F388245815B131F2003CCEAD /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: SooHyun Kim (DUC44L4947)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FamiliarSpecialWork/FamiliarSpecialWord-Prefix.pch";
+				INFOPLIST_FILE = "FamiliarSpecialWork/FamiliarSpecialWord-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork/adam\"",
+				);
+				PRODUCT_NAME = FamiliarSpecialWord;
+				PROVISIONING_PROFILE = "68E6FE7B-BA65-436F-9864-83B7F43779F0";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
 		F3AAEAFD15A3FE2300B5A7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -294,7 +383,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SooHyun Kim (DUC44L4947)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -303,6 +392,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "68E6FE7B-BA65-436F-9864-83B7F43779F0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -311,7 +401,7 @@
 		F3AAEB0015A3FE2300B5A7E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: SOOHYUN Kim";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FamiliarSpecialWork\"",
@@ -319,9 +409,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FamiliarSpecialWork/FamiliarSpecialWord-Prefix.pch";
 				INFOPLIST_FILE = "FamiliarSpecialWork/FamiliarSpecialWord-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork/adam\"",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = FamiliarSpecialWord;
-				PROVISIONING_PROFILE = "DF06C564-C88A-4D4F-873A-7C45956C8E40";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -329,7 +423,7 @@
 		F3AAEB0115A3FE2300B5A7E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: SOOHYUN Kim";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SooHyun Kim (DUC44L4947)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/FamiliarSpecialWork\"",
@@ -337,8 +431,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FamiliarSpecialWork/FamiliarSpecialWord-Prefix.pch";
 				INFOPLIST_FILE = "FamiliarSpecialWork/FamiliarSpecialWord-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/FamiliarSpecialWork/adam\"",
+				);
 				PRODUCT_NAME = FamiliarSpecialWord;
-				PROVISIONING_PROFILE = "DF06C564-C88A-4D4F-873A-7C45956C8E40";
+				PROVISIONING_PROFILE = "68E6FE7B-BA65-436F-9864-83B7F43779F0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -351,6 +449,7 @@
 			buildConfigurations = (
 				F3AAEAFD15A3FE2300B5A7E0 /* Debug */,
 				F3AAEAFE15A3FE2300B5A7E0 /* Release */,
+				F388245715B131F2003CCEAD /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -360,6 +459,7 @@
 			buildConfigurations = (
 				F3AAEB0015A3FE2300B5A7E0 /* Debug */,
 				F3AAEB0115A3FE2300B5A7E0 /* Release */,
+				F388245815B131F2003CCEAD /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
